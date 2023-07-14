@@ -2,4 +2,4 @@
 pi_cloud_instance_id: "1370c926-55ef-42ab-b5d7-5f6307595b37"
 region: "osa"
 zone: "osa21"
-ibmcloud_api_key: "7-uVQ3adjDsANxOQ7TC0h3r6Yt3CdJW2OubNVek1e11m"
+ibmcloud_api_key: "{{}}"
