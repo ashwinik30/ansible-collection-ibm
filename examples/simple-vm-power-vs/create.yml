@@ -1,6 +1,6 @@
 ---
 - name: POWER VSI Creation Demo
-  hosts: localhost
+  hosts: all
   collections:
    - ibm.cloudcollection
   vars:
