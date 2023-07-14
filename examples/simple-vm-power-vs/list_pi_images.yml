@@ -1,6 +1,6 @@
 ---
 - name: List Power Virtual Server Cloud Images
-  hosts: localhost
+  hosts: all
   collections:
    - ibm.cloudcollection
   vars:
