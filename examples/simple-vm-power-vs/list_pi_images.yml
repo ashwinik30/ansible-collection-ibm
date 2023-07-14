@@ -4,7 +4,7 @@
   collections:
    - ibm.cloudcollection
   vars:
-    pi_cloud_instance_id: "YOUR PI CLOUD INSTANCE ID"
+    pi_cloud_instance_id: "1370c926-55ef-42ab-b5d7-5f6307595b37"
 
   tasks:
     - ibm_pi_images_info:
