@@ -7,6 +7,10 @@
     pi_cloud_instance_id: "1370c926-55ef-42ab-b5d7-5f6307595b37"
 
   tasks:
+    - name: Fetch the variables from var file
+      include_vars:
+        file: vars.yml
+        
     - ibm_pi_images_info:
         pi_cloud_instance_id: "{{ pi_cloud_instance_id }}"
       register: images_list
