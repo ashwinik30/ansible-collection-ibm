@@ -4,15 +4,19 @@
   collections:
    - ibm.cloudcollection
   vars:
-    pi_name: ansible-demo-power-vm
+    pi_name: ashwini-kadam-ansible-demo-power-vm
     sys_type: s922
-    pi_image: "7200-03-03"
+    pi_image: "rhel-90-07062022_Tier1"
     proc_type: shared
     processors: "0.25"
     memory: "2"
     storage_type: tier1
-    pi_cloud_instance_id: "11956c6d-f7e8-4120-a403-14428405d1fe"
-    ssh_public_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC0eZ4uNSH6rtxNM7MagrBtxwlASw0iKcxDdXq9eNu93xDpsvxdn6xE/JESlIHhf9/45oLw9AKpu/MZYwqQ0O+uedwgtLvorv++fyXI36cls4xmUCuNnEhoK1aXh26N+V+lxejqF3DJhMKHYprQCnyl/8RWkWIFc2Jo60ACZ98MY4rRHgBP/0t1tqmb0I4IdBaYLctVIdv16gYJ5zqGYKeJBMG7XtgkrtOeacVoArrmjHY6n2cNgE5jLt9n9MyyGLjzq1agIpwwsWJGfhzqo2I98UhGWtUlD2UeNHbuJZmbXeyibuoV7RhDZg9LafkOXOTojjZc9rUrd8BChoHhbW3X anil@Anils-MacBook-Pro.local"
+    pi_cloud_instance_id: "1370c926-55ef-42ab-b5d7-5f6307595b37"
+    region: "osa"
+    zone: "osa21"
+    ssh_public_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCEvvofjxPPqi4Eqv3bHy2xosJPeDGxFoCPkZn9bizPh6ikWvK29HcL2bUr4bfDO7pQzNwEORg8DKfAfpoR8gW3Q888hwvQxwisHLT696+LNFsKOxQpSX3eNlUPg+HNs2A55+MYfQwlui0+fanf9KJWLK7oYeJXsjYmaEIYVTG4mNBeMPKt+mdS5Ai1gmvZWpHM3o3lI8Xx3N9IkP2VMqhTa8uLaeMaMGaFuhYjwj1XnCEWUl4Utks3xUkmrmqGn5uPX2blMbGawYY0iwuBU6bWP0xIWwYbhtFiAeMxUcs/JK2hSrpdK5YtaQGCq3ubp0EUJK58PKD9ao1Vj7L6/lkN Ashwini.Kadam-windowskey"
+    environment:
+        IC_API_KEY: "{{ lookup('env', 'IC_API_KEY') }}"
   tasks:
     - name: Check for existing SSH Key
       ibm_pi_key_info:
@@ -61,6 +65,7 @@
       failed_when:
         - pi_network_existing_output.rc != 0
         - '"unable to get network" not in pi_network_existing_output.stderr'
+        - '"Error:item not found" not in pi_network_existing_output.stderr'
       register: pi_network_existing_output
 
     - name: Save existing network as fact
