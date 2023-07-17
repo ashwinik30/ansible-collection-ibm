@@ -7,14 +7,12 @@
     pi_cloud_instance_id: "1370c926-55ef-42ab-b5d7-5f6307595b37"
   environment:
         IC_API_KEY: "{{ lookup('env', 'IC_API_KEY') }}"   
-        region: "{{ lookup('env', 'region') }}"
-        zone: "{{ lookup('env', 'zone') }}"
         shell: "echo $IC_API_KEY"
   tasks:   
     - ibm_pi_images_info:
         pi_cloud_instance_id: "{{ pi_cloud_instance_id }}"
-        #region: "osa"
-        #zone: "osa21"
+        region: "osa"
+        zone: "osa21"
       register: images_list
 
     - debug:
