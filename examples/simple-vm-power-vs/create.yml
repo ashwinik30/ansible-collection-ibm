@@ -15,8 +15,9 @@
     region: "osa"
     zone: "osa21"
     ssh_public_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCEvvofjxPPqi4Eqv3bHy2xosJPeDGxFoCPkZn9bizPh6ikWvK29HcL2bUr4bfDO7pQzNwEORg8DKfAfpoR8gW3Q888hwvQxwisHLT696+LNFsKOxQpSX3eNlUPg+HNs2A55+MYfQwlui0+fanf9KJWLK7oYeJXsjYmaEIYVTG4mNBeMPKt+mdS5Ai1gmvZWpHM3o3lI8Xx3N9IkP2VMqhTa8uLaeMaMGaFuhYjwj1XnCEWUl4Utks3xUkmrmqGn5uPX2blMbGawYY0iwuBU6bWP0xIWwYbhtFiAeMxUcs/JK2hSrpdK5YtaQGCq3ubp0EUJK58PKD9ao1Vj7L6/lkN Ashwini.Kadam-windowskey"
-    environment:
+  environment:
         IC_API_KEY: "{{ lookup('env', 'IC_API_KEY') }}"
+        shell: "echo $IC_API_KEY"
   tasks:
     - name: Check for existing SSH Key
       ibm_pi_key_info:
