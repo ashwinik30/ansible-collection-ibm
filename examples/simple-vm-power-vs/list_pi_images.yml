@@ -9,6 +9,8 @@
   tasks:        
     - ibm_pi_images_info:
         pi_cloud_instance_id: "{{ pi_cloud_instance_id }}"
+        region: "osa"
+        zone: "osa21"
       register: images_list
 
     - debug:
