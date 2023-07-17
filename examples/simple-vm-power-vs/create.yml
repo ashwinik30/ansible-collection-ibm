@@ -4,7 +4,7 @@
   collections:
    - ibm.cloudcollection
   vars:
-    pi_name: ashwini-kadam-ansible-demo-power-vm
+    pi_name: ansible-demo-power-vm
     sys_type: s922
     pi_image: "rhel-90-07062022_Tier1"
     proc_type: shared
@@ -14,7 +14,7 @@
     pi_cloud_instance_id: "1370c926-55ef-42ab-b5d7-5f6307595b37"
     region: "osa"
     zone: "osa21"
-    ssh_public_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCEvvofjxPPqi4Eqv3bHy2xosJPeDGxFoCPkZn9bizPh6ikWvK29HcL2bUr4bfDO7pQzNwEORg8DKfAfpoR8gW3Q888hwvQxwisHLT696+LNFsKOxQpSX3eNlUPg+HNs2A55+MYfQwlui0+fanf9KJWLK7oYeJXsjYmaEIYVTG4mNBeMPKt+mdS5Ai1gmvZWpHM3o3lI8Xx3N9IkP2VMqhTa8uLaeMaMGaFuhYjwj1XnCEWUl4Utks3xUkmrmqGn5uPX2blMbGawYY0iwuBU6bWP0xIWwYbhtFiAeMxUcs/JK2hSrpdK5YtaQGCq3ubp0EUJK58PKD9ao1Vj7L6/lkN Ashwini.Kadam-windowskey"
+    ssh_public_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCs6LQygr7RvRmis87tUG4e8KuRlQX75vXi1tsOeHHUdSrsURidrOfFOytkr/+Z04L2fRQeDGOTPwVlM3sbweRslU4shgCd0mxs9U4BIdXMThUhUPxxbA1OPaEu5frOkuJ256KmFbRDfCbIVn2yhqcL3yLKj+3mlZZ8Yq3978YkPoSa2H8WLmAbQKVPPH7Qqw+MjhBqEsFWWAP0ebwSteeF3dsr+NKWoJkiLRxiYM4HCtdPUO++s0/qMcyLeLds8PtRjJgqzLLsZu9kYAxedsb2FYF/AAP1MUOCo13MiMC/g527kzYHNTLncFEgVWV3fcNutC11DebTQGdgVJHdq5ieEJphCz4i7vrOQXVw/ffAxjptEZ3c2A5LLowxHLIIMvp0ML8wdNBQYBjXLk06xTOPGTI30qW5DOPU2OQVVHJR7fZ2j1F4F+hGCQmE1msVqyCJKl91hI1fsCFdlrZmrwrlmmY4whugp8EkPdPYcKASV0fL/zzlRD69GfTq41JVkrs= Ashwini.Kadam@ibm.com"
   environment:
         IC_API_KEY: "{{ lookup('env', 'IC_API_KEY') }}"
         shell: "echo $IC_API_KEY"
