@@ -4,7 +4,7 @@
   collections:
    - ibm.cloudcollection
   vars:
-    pi_cloud_instance_id: "1370c926-55ef-42ab-b5d7-5f6307595b37"
+    pi_cloud_instance_id: "51a46537-a3a3-4e79-88ee-507feb47e7d0"
   environment:
         IC_API_KEY: "{{ lookup('env', 'IC_API_KEY') }}"   
         shell: "echo $IC_API_KEY"
